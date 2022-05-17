@@ -7,7 +7,12 @@
 from flask import Flask, request
 
 app = Flask('__main__')
-
+user = {
+    "matricula":"112233",
+    "first_name":"SOLOMIRO",
+    "last_name":"PEGAMENTOSOS",
+    "phone":"614-1112233"
+}
 # GET methods
 
 #test method
@@ -18,8 +23,6 @@ def go_home():
 #get users
 @app.route('/users', methods=['GET'])
 def get_users():
-    user = request.json
-    print(user)
     return user
 
 # POST methods
