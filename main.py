@@ -8,9 +8,21 @@ from flask import Flask, request
 
 app = Flask('__main__')
 
+# GET methods
+
+#test method
 @app.route('/', methods=['GET'])
 def go_home():
     return "Ola pa"
+
+#get users
+@app.route('/users', methods=['GET'])
+def get_users():
+    user = request.json
+    print(user)
+    return user
+
+# POST methods
 
 # save an user
 @app.route('/users', methods=['POST'])
