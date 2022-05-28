@@ -1,4 +1,3 @@
-from dataclasses import dataclass
 from http import client
 from wsgiref import headers
 from iot_device import Sensor
@@ -20,10 +19,12 @@ while True:
     "name": "Temp_sensor",
     "value": s.get_random_number()
     }
+    
     json_data = json.dumps(data)
 
-    conn.request("POST", "/devices", json_data, headers)
-    conn.close()
-
-    print(s.get_random_number())
+    if data["value"] >= 15:
+        print(f'Warnign: the device is upper {data["value"]} grades')
+        conn.request("POST", "/devices", json_data, headers)
+        conn.close()
+    
     time.sleep(1)
