@@ -50,3 +50,6 @@ Run server
 ```
 
 ## Simulating an IoT device
+![image](https://user-images.githubusercontent.com/50721208/170846919-0bf07895-b0af-4d6b-8976-a93902c7853a.png)
+![image](https://user-images.githubusercontent.com/50721208/170846936-9bf7a7c2-8f81-45d7-87c0-e3c72304b8d3.png)
+
